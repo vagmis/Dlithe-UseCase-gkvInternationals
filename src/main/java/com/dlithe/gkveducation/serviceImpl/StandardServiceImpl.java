@@ -56,12 +56,7 @@ public class StandardServiceImpl implements StandardService {
         studentDetailsEntity.setStudentPhoneNumber(studentDetailsRequest.getStudentPhoneNumber());
         studentDetailsEntity.setStudentRollNumber(studentDetailsRequest.getStudentRollNumber());
         studentDetailsEntity.setStudentSurname(studentDetailsRequest.getStudentSurname());
-        studentDetailsEntity.setStudentEmail(studentDetailsRequest.getStudentEmail());
-        studentDetailsEntity.setStudentDate(studentDetailsRequest.getStudentDate());
-        studentDetailsEntity.setStudentClassName(studentDetailsRequest.getStudentClassName());
-        studentDetailsEntity.setStudentSection(studentDetailsRequest.getStudentSection());
-        studentDetailsEntity.setStudentPerformance(studentDetailsRequest.getStudentPerformance());
-        studentDetailsEntity.setStudentPincode(studentDetailsRequest.getStudentPincode());
+
 
         studentDetailsDAO.save(studentDetailsEntity);
 
@@ -149,7 +144,6 @@ public class StandardServiceImpl implements StandardService {
             studentDetailsEntity.setStudentSurname(studentDetailsRequest.getStudentSurname());
             studentDetailsEntity.setStudentFatherName(studentDetailsRequest.getStudentFatherName());
             studentDetailsEntity.setStudentMotherName(studentDetailsRequest.getStudentMotherName());
-            studentDetailsEntity.setStudentEmail(studentDetailsRequest.getStudentEmail());
             studentDetailsEntity.setStudentAddress(studentDetailsRequest.getStudentAddress());
 
             studentDetailsDAO.save(studentDetailsEntity);

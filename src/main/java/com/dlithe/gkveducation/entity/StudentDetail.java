@@ -10,8 +10,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
-@Table(name="student_details1")
-public class StudentDetailsEntity {
+@Table(name="student_details")
+public class StudentDetail {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,13 +40,11 @@ public class StudentDetailsEntity {
     @Column(name = "student_roll_number")
     private int studentRollNumber;
 
-    @Column(name="school_standard_id")
-    private int schoolStandardId;
+//    @Column(name="school_standard_id")
+//    private int schoolStandardId;
 
 
-//    @ManyToOne
-//    @JoinColumn(name="school_standard_id")
-//    private SchoolStandardEntity schoolStandardEntity;
+
 //    @Column(name = "standard_id")
 //    private String standardId;
 

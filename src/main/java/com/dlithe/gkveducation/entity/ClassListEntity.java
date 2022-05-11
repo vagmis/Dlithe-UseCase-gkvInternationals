@@ -11,8 +11,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-@Table(name="school_standard_data1")
-public class SchoolStandardEntity {
+@Table(name="class-list-name")
+public class ClassListEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,9 +29,10 @@ public class SchoolStandardEntity {
     @Column(name = "school_tagline")
     private String schoolStandardTagline;
 
-//    @OneToMany(mappedBy = "schoolStandardEntity")
-//    @Column(name="standard_id")
-//    private List<StudentDetailsEntity> studentDetailsEntityList;
+
+    @Column(name = "class_number")
+    private int classNumber;
+
 
 
 }

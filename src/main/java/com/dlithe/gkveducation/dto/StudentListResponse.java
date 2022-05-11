@@ -9,16 +9,13 @@ import lombok.ToString;
 @Setter
 @EqualsAndHashCode
 @ToString
-public class StudentDetailsResponse {
+public class StudentListResponse {
 
-
-    private String studentName;
+    private String  studentName;
+    private String  studentSurname;
     private String studentFatherName;
     private String studentMotherName;
     private String studentAddress;
     private String studentPhoneNumber;
     private int studentRollNumber;
-
-    public static class GkvClassListRequest {
-    }
 }

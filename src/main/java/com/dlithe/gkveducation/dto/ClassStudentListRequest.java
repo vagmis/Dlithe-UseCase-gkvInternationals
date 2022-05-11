@@ -1,24 +1,26 @@
 package com.dlithe.gkveducation.dto;
 
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Column;
+
 @Getter
 @Setter
 @EqualsAndHashCode
 @ToString
-public class StudentDetailsResponse {
+public class ClassStudentListRequest {
 
-
-    private String studentName;
+    private int  studentDetailsId;
+    private String  studentName;
+    private String  studentSurname;
     private String studentFatherName;
     private String studentMotherName;
     private String studentAddress;
     private String studentPhoneNumber;
     private int studentRollNumber;
-
-    public static class GkvClassListRequest {
-    }
+    // private int schoolStandardId;
 }

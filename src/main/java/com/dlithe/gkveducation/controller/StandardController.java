@@ -1,11 +1,8 @@
 package com.dlithe.gkveducation.controller;
 
-import com.dlithe.gkveducation.dto.AdminLoginRequest;
 import com.dlithe.gkveducation.dto.BaseResponse;
 import com.dlithe.gkveducation.dto.SchoolStandardResponse;
-
 import com.dlithe.gkveducation.dto.StudentDetailsRequest;
-import com.dlithe.gkveducation.entity.SchoolStandardEntity;
 import com.dlithe.gkveducation.service.StandardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,7 +26,7 @@ public class StandardController {
             return new ResponseEntity<>(baseResponse, HttpStatus.BAD_REQUEST);
         }
         return standardService.addStandard(standardRequest);
-    }*/
+    } */
 
     @PostMapping("add-student-details") //standard ID
     public ResponseEntity<BaseResponse> addNewStudent(@RequestBody StudentDetailsRequest studentDetailsRequest){
@@ -80,6 +77,11 @@ public class StandardController {
         }
         return standardService.purchaseProduct(schoolStandardResponse);
     }
+
+
+
+
+
 
 
 }
