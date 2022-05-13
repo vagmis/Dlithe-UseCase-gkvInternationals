@@ -7,10 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
@@ -20,7 +17,7 @@ public class AdminLoginController {
     @Autowired
     private AdminLoginService adminLoginService;
 
-    @PostMapping("add-admin-login")
+    @PostMapping("add-admin-login-query")
     public ResponseEntity<BaseResponse> addAdminNewLogin(@RequestBody AdminLoginRequest adminLoginRequest){
         if(adminLoginRequest  == null){
             BaseResponse baseResponse = new BaseResponse();
@@ -32,7 +29,7 @@ public class AdminLoginController {
         return adminLoginService.addAdminLogin(adminLoginRequest);
     }
 
-    @PostMapping("add-admin-login-query")
+    @PostMapping("add-admin-login")
     public ResponseEntity<BaseResponse> addLogin(@RequestBody AdminLoginRequest adminLoginRequest){
         if(adminLoginRequest  == null){
             BaseResponse baseResponse = new BaseResponse();
@@ -44,5 +41,9 @@ public class AdminLoginController {
         return adminLoginService.addedUser(adminLoginRequest);
     }
 
+    @GetMapping("get-administrator-list")
+    public  ResponseEntity<BaseResponse>  getTeachersList(){
+        return adminLoginService.getAdminList();
+    }
 
 }

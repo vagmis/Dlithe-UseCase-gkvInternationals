@@ -9,11 +9,8 @@ import lombok.ToString;
 @Setter
 @EqualsAndHashCode
 @ToString
-public class TeachersResponse {
-
+public class TeachersListResponse {
     private String teacherName;
     private String teacherPhoto;
     private String teacherDescription;
-
-
 }

@@ -1,10 +1,7 @@
 package com.dlithe.gkveducation.controller;
 
 import com.dlithe.gkveducation.dto.BaseResponse;
-import com.dlithe.gkveducation.dto.ClassRequest;
 import com.dlithe.gkveducation.dto.GkvStudentDetailsRequest;
-import com.dlithe.gkveducation.dto.StudentDetailsRequest;
-import com.dlithe.gkveducation.service.ClassService;
 import com.dlithe.gkveducation.service.GkvService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

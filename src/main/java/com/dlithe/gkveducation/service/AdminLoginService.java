@@ -13,4 +13,7 @@ public interface AdminLoginService {
     ResponseEntity<BaseResponse> addAdminLogin(AdminLoginRequest adminLoginRequest);
 
     ResponseEntity<BaseResponse> addedUser(AdminLoginRequest adminLoginRequest);
+
+    ResponseEntity<BaseResponse> getAdminList();
+
 }

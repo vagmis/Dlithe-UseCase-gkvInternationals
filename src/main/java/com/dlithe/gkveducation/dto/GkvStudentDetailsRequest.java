@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Column;
+
 @Getter
 @Setter
 @EqualsAndHashCode
@@ -19,4 +21,5 @@ public class GkvStudentDetailsRequest {
     private String gkvStudentPhoneNumber;
     private String gkvStudentRollNumber;
     private int gkvClassNumber;
+    private String  gkvStandardName;
 }

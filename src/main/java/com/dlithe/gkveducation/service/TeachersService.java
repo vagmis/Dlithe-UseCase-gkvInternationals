@@ -8,4 +8,6 @@ import org.springframework.stereotype.Component;
 public interface TeachersService {
     ResponseEntity<BaseResponse> findTeacherData(int teacherId);
 
+    ResponseEntity<BaseResponse> getTeachersList();
+
 }

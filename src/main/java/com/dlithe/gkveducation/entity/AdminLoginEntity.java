@@ -25,4 +25,10 @@ public class AdminLoginEntity {
     @Column(name = "admin_login_password")
     private String adminLoginPassword;
 
+    @Column(name = "admin_photo")
+    private String adminPhoto;
+
+    @Column(name = "admin_designation")
+    private String adminDesignation;
+
 }

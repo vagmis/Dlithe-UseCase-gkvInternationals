@@ -61,6 +61,8 @@ public class GkvServiceImpl implements GkvService {
         gkvStudentDetailsResponse.setGkvStudentRollNumber(gkvStudentData.getGkvStudentRollNumber());
         gkvStudentDetailsResponse.setGkvStudentAddress(gkvStudentData.getGkvStudentAddress());
         gkvStudentDetailsResponse.setGkvStudentPhoneNumber(gkvStudentData.getGkvStudentPhoneNumber());
+        gkvStudentDetailsResponse.setGkvClassNumber(gkvStudentData.getGkvClassNumber());
+        gkvStudentDetailsResponse.setGkvStandardName(gkvStudentData.getGkvStandardName());
 
         baseResponse.setMessage("Student Details Found ");
         baseResponse.setHttpStatus(HttpStatus.OK);
@@ -81,6 +83,7 @@ public class GkvServiceImpl implements GkvService {
         gkvEntity.setGkvClassNumber(gkvStudentDetailsRequest.getGkvClassNumber());
         gkvEntity.setGkvStudentSurname(gkvStudentDetailsRequest.getGkvStudentSurname());
         gkvEntity.setGkvStudentRollNumber(gkvStudentDetailsRequest.getGkvStudentRollNumber());
+        gkvEntity.setGkvStandardName(gkvStudentDetailsRequest.getGkvStandardName());
 
         gkvDAO.save(gkvEntity);
         baseResponse.setMessage("added Student details");
@@ -114,14 +117,8 @@ public class GkvServiceImpl implements GkvService {
     @Override
     public ResponseEntity<BaseResponse> updateStudentDeatils(GkvStudentDetailsRequest gkvStudentDetailsRequest) {
         BaseResponse baseResponse = new BaseResponse();
-       // Optional<GkvEntity> gkvEntity = gkvDAO.updateGkvStudentDetails(gkvStudentDetailsRequest.getGkvStudentRollNumber());
-      //  GkvEntity gkvEntity1 = new GkvEntity();
-
         GkvEntity gkvEntity = new GkvEntity();
         GkvEntity gkvEntity1 = gkvDAO.updateGkvStudentDetails(gkvEntity.getGkvStudentRollNumber());
-
-//        gkvEntity.setGkvStudentName(gkvStudentDetailsRequest.getGkvStudentName());
-//        gkvEntity.setGkvStudentFatherName(gkvStudentDetailsRequest.getGkvStudentFatherName());
         gkvEntity1.setGkvStudentRollNumber(gkvStudentDetailsRequest.getGkvStudentRollNumber());
         gkvEntity1.setGkvStudentName(gkvStudentDetailsRequest.getGkvStudentName());
         gkvEntity1.setGkvStudentSurname(gkvStudentDetailsRequest.getGkvStudentSurname());
@@ -131,7 +128,6 @@ public class GkvServiceImpl implements GkvService {
         baseResponse.setHttpStatus(HttpStatus.CREATED);
         baseResponse.setHttpStatusCode(HttpStatus.CREATED.value());
         return new ResponseEntity<>(baseResponse, HttpStatus.CREATED);
-
     }
 
 //    @Override

@@ -18,5 +18,7 @@ public class GkvStudentDetailsResponse {
     private String  gkvStudentMotherName;
     private String  gkvStudentAddress;
     private String  gkvStudentPhoneNumber;
+    private int gkvClassNumber;
+    private String  gkvStandardName;
 
 }

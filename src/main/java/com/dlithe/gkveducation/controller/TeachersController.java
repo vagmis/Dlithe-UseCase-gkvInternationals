@@ -4,14 +4,18 @@ package com.dlithe.gkveducation.controller;
 import com.dlithe.gkveducation.dto.BaseResponse;
 import com.dlithe.gkveducation.service.StandardService;
 import com.dlithe.gkveducation.service.TeachersService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Slf4j
+@CrossOrigin(origins = "*")
 public class TeachersController {
     @Autowired
     private TeachersService teachersService;
@@ -27,6 +31,11 @@ public class TeachersController {
             return new ResponseEntity<>(baseResponse, HttpStatus.BAD_REQUEST);
         }
         return teachersService.findTeacherData(teacherId);
+    }
+
+    @GetMapping("get-teacher-list")
+    public  ResponseEntity<BaseResponse>  getTeachersList(){
+        return teachersService.getTeachersList();
     }
 }
 
