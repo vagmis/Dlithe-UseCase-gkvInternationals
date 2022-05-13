@@ -1,0 +1,56 @@
+<!-- <mat-toolbar class="toolbar">
+  <div style="margin-right:40%;" (click)=" navigateStudentList()">	
+    <mat-icon>arrow_back</mat-icon></div>
+  <span>Student Details</span>
+</mat-toolbar> -->
+<div class="body">
+  <div style="margin-left:5%; margin-top: 10px;" (click)="navigateStudentList()">
+    <img height="30px" width="30px"
+      src="https://i.ibb.co/hd5mzPv/Fire-Shot-Capture-078-93634-png-512-512-cdn-icons-png-flaticon-com-modified.png ">
+  </div>
+  <div class="card">
+    <!-- <div *ngFor=" let num of studentNum "> -->
+    <img class="image"
+      src="https://images.unsplash.com/photo-1632406898177-95f7acd8854f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YWRtaW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+      style="width:100%">
+    <table class="tableDesign">
+      <tr>
+        <th width="40%">First Name</th>
+        <td width="2%">:</td>
+        <td>{{eachStudent.gkvStudentName}}</td>
+      </tr>
+      <tr>
+        <th width="40%">Surname</th>
+        <td width="0%">:</td>
+        <td width="70%">{{eachStudent.gkvStudentSurname}}</td>
+      </tr>
+      <tr>
+        <th width="40%">Father Name</th>
+        <td width="2%">:</td>
+        <td>{{eachStudent.gkvStudentFatherName}}</td>
+      </tr>
+      <tr>
+        <th width="40%">Mother Name</th>
+        <td width="2%">:</td>
+        <td>{{eachStudent.gkvStudentMotherName}}</td>
+      </tr>
+
+      <tr>
+        <th width="40%">Roll NO.</th>
+        <td width="2%">:</td>
+        <td>{{eachStudent.gkvStudentRollNumber}}</td>
+      </tr>
+      <tr>
+        <th width="40%">Address</th>
+        <td width="2%">:</td>
+        <td>{{eachStudent.gkvStudentAddress}}</td>
+      </tr>
+      <tr>
+        <th width="40%">Phone number</th>
+        <td width="2%">:</td>
+        <td>{{eachStudent.gkvStudentPhoneNumber}}</td>
+      </tr>
+    </table>
+    <p><button (click)="navigateEditPage(eachStudent.gkvStudentRollNumber)"> Edit </button></p>
+  </div>
+</div>

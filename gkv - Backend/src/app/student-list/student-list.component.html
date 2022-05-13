@@ -1,0 +1,23 @@
+<div class="bg">
+<div  class="content">
+  <div style="margin-right:45%;"  (click)="navigateClassList()">
+    <img height="30px" width="30px" src="https://i.ibb.co/hd5mzPv/Fire-Shot-Capture-078-93634-png-512-512-cdn-icons-png-flaticon-com-modified.png ">
+  </div>
+  <div *ngFor=" let cl of  studentList " >
+  <mat-card class="carddesign">
+    <mat-card-header>
+      <mat-card-title>{{cl.gkvStandardName}}</mat-card-title>
+      <span style="margin-left: 20%;"><mat-card-title>{{cl.gkvStudentName}}</mat-card-title></span>
+      <!-- <span style="margin-left: 20%;"><mat-card-title>{{cl.rollNumber}}</mat-card-title></span> -->
+      <span style="margin-left: 45%;">
+        <mat-card-actions>
+        <div class="buttondesign">
+       <button mat-button  class="button" (click)="navigatestudentDeatils(cl.gkvStudentRollNumber)">View Deatils</button>
+        </div>
+        </mat-card-actions>
+      </span>
+    </mat-card-header>
+    </mat-card>  
+</div>
+</div>
+</div>

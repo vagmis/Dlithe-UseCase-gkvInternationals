@@ -1,0 +1,120 @@
+<mat-toolbar class="toolbar">
+    <div style="margin-right:45%;" (click)="navigateClassList()">
+        <img height="30px" width="30px" src="https://i.ibb.co/hd5mzPv/Fire-Shot-Capture-078-93634-png-512-512-cdn-icons-png-flaticon-com-modified.png ">
+    </div>
+    <span>𝐌𝐀𝐑𝐊 𝐘𝐎𝐔𝐑 𝐃𝐄𝐓𝐀𝐈𝐋𝐒</span>
+</mat-toolbar>
+
+<form [formGroup]="addStudentForm">
+    <div class="body">
+        <div class="form-group">
+            <mat-grid-list cols="1" rowHeight="800px">
+                <mat-grid-tile>
+                    <div class="example-container">
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">First Name</mat-label>
+                            <input matInput class="form-control" formControlName="gkvStudentName">
+                            <mat-error *ngIf="addStudentForm.controls['gkvStudentName'].touched && addStudentForm.controls['gkvStudentName'].hasError('required') ">
+                            <span class="is-invalid">Name is required</span>
+                            </mat-error>
+                        </mat-form-field>
+ 
+
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Surname</mat-label>
+                            <input matInput class="form-control" formControlName="gkvStudentSurname">
+                          
+                            <mat-error *ngIf="addStudentForm.controls['gkvStudentSurname'].touched && addStudentForm.controls['gkvStudentSurname'].hasError('required') ">
+                                <span class="is-invalid">Surname is required</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <br>
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Father Name</mat-label>
+                            <input matInput class="form-control" formControlName="gkvStudentFatherName">
+                            <mat-error
+                                *ngIf="addStudentForm.controls['gkvStudentFatherName'].touched && addStudentForm.controls['gkvStudentFatherName'].hasError('required') ">
+                                <span class="is-invalid">Father name is required</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Mother Name</mat-label>
+                            <input matInput class="form-control" formControlName="gkvStudentMotherName">
+                            <mat-error
+                                *ngIf="addStudentForm.controls['gkvStudentMotherName'].touched && addStudentForm.controls['gkvStudentMotherName'].hasError('required') ">
+                                <span class="is-invalid">Mother name is required</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Phone Number</mat-label>
+                            <input matInput placeholder="987654321" class="form-control"
+                                formControlName="gkvStudentPhoneNumber">
+
+                                <mat-error
+                                *ngIf=" submitted && addStudentForm.controls['gkvStudentPhoneNumber'].hasError('required')">
+                                <span class="is-invalid">phone number is required</span>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="addStudentForm.controls['gkvStudentPhoneNumber'].dirty && addStudentForm.controls['gkvStudentPhoneNumber'].invalid">
+                                Mobile number should have 10 digit
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Address</mat-label>
+                            <input matInput placeholder="#001,Dollar Colony" class="form-control"
+                                formControlName="gkvStudentAddress">
+                                <mat-error
+                                *ngIf="addStudentForm.controls['gkvStudentAddress'].touched && addStudentForm.controls['gkvStudentAddress'].hasError('required')">
+                                <span class="is-invalid">Adress is required</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Roll Number</mat-label>
+                            <input matInput placeholder="1233455" class="form-control"
+                                formControlName="gkvStudentRollNumber">
+                            <mat-error
+                                *ngIf="addStudentForm.controls['gkvStudentRollNumber'].touched && addStudentForm.controls['gkvStudentRollNumber'].hasError('required')">
+                                <span class="is-invalid">Roll Number is required</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Class Name</mat-label>
+                            <input matInput placeholder="COBAL" class="form-control" formControlName="gkvStandardName">
+
+                            <mat-error
+                                *ngIf="addStudentForm.controls['gkvStandardName'].touched && addStudentForm.controls['gkvStandardName'].hasError('required')">
+                                <span class="is-invalid">CLASS</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Class</mat-label>
+                            <input matInput placeholder="1" class="form-control" formControlName="gkvClassNumber">
+
+                            <mat-error
+                                *ngIf="addStudentForm.controls['gkvClassNumber'].touched && addStudentForm.controls['gkvClassNumber'].hasError('required')">
+                                <span class="is-invalid">CLASS</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <div>
+                            <div class=" form-group">
+                                <button type="button" [disabled]=" addStudentForm.invalid" class="disabled"
+                                    (click)="navigateStudentList()">Submit</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+</form>

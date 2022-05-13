@@ -1,0 +1,51 @@
+<mat-toolbar class="mat-elevation-z8">
+        <button
+          mat-icon-button
+          *ngIf="sidenav.mode === 'over'"
+          (click)="sidenav.toggle()"
+        >
+          <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+          <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+        </button>
+        𝔾𝕂𝕍 𝕀ℕ𝕋𝔼ℝℕ𝔸𝕋𝕀𝕆ℕ𝔸𝕃
+      </mat-toolbar>
+      
+      <mat-sidenav-container>
+        <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+          <div *ngFor="let admin of admins" >
+          <img
+            class="avatar mat-elevation-z8"
+            [src]="admin.adminPhoto"
+          />
+        
+          <h4 class="name">{{admin.adminLoginName}}</h4>
+          <p class="designation">{{admin.adminDesignation}}</p>
+        </div>
+          <mat-divider></mat-divider>
+      
+          <button mat-button class="menu-button" routerLink="/landing-page">
+            <mat-icon>home</mat-icon>
+            <span style="padding-left:12px">Home</span>
+          </button>
+          <button mat-button class="menu-button" routerLink="/class-list">
+            <mat-icon>person</mat-icon>
+            <span style="padding-left:12px">Class List</span>
+          </button>
+          <button mat-button class="menu-button" routerLink="/log-out">
+            <mat-icon aria-hidden="false">logout</mat-icon>
+            <span style="padding-left:12px">Log out</span>
+          </button>
+          <mat-divider></mat-divider>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <div class="content mat-elevation-z8">
+            <router-outlet></router-outlet>
+            <div class="sticky"> 
+            <h3>𝕮𝖍𝖆𝖓𝖌𝖊 𝖎𝖘 𝖙𝖍𝖊 𝖊𝖓𝖉 𝖗𝖊𝖘𝖚𝖑𝖙 𝖔𝖋 𝖆𝖑𝖑 𝖙𝖗𝖚𝖊 𝖑𝖊𝖆𝖗𝖓𝖎𝖓𝖌.</h3>
+            <p class="footer">GKV Internationals © 2015</p>
+            </div>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+
+

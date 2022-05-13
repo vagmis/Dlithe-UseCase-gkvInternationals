@@ -1,0 +1,30 @@
+<!-- <ul>
+  <div *ngFor="let std of classes">
+    <li>{{std.gkvStandardName}}</li>
+  </div>
+</ul> -->
+
+
+<div class="bg">
+  <div class="content">
+    <div *ngFor="let std of classes">
+      <div (click)="navigateStudentList(std.gkvClassNumber)">
+        <mat-card class="carddesign">
+          <mat-card-header>
+            <mat-card-title>{{std.gkvStandardName}}</mat-card-title>
+            <!-- <mat-card-subtitle>Class {{std.gkvClassNumber}}</mat-card-subtitle> -->
+          </mat-card-header>
+          <img class="images" mat-card-image [src]="std.gkvStandardPhoto">
+          <mat-card-content>
+            <p> {{std.gkvStandardTagLine}} </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="buttondesign">
+              <button mat-button class="button" (click)="navigateAddStudent()">Add STUDENTS</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

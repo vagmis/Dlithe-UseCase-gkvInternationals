@@ -1,0 +1,50 @@
+<div class="bg">
+    <form [formGroup]="registrationForm">
+        <div class="form-group">
+            <div class="box-form">
+                <div class="left">
+                    <div class="overlay">
+                        <div (click)="navigateLandingPage()"><mat-icon >arrow_back</mat-icon></div>
+                        <h1>Hello Admin.</h1>
+                        <p style="color:black;">“I don’t know how you handle everything you do.
+                            I hope your day is as great as you are!”</p>
+                        <a><img src="../../assets/googleSignUp.jpeg" width="200px"></a>
+
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="../../assets/login.jpeg" height="200px">
+
+                    <div class="inputs">
+                        <input type="text" class="form-control" formControlName="adminLoginName" placeholder="User Name" />
+                        <div
+                            *ngIf="registrationForm.controls['adminLoginName'].touched && registrationForm.controls['adminLoginName'].hasError('required') ">
+                            <span class="is-invalid" style="color: red;">User Name is required</span>
+                        </div>
+
+                        <br>
+                        <div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" formControlName="adminLoginPassword"
+                                    placeholder="Password" />
+                                <div
+                                    *ngIf="registrationForm.controls['adminLoginPassword'].touched && registrationForm.controls['adminLoginPassword'].hasError('required') ">
+                                    <span class="is-invalid" style="color: red;">Password is required</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+
+                        <div class="form-group">
+                            <button (click)="onNavigateHome()" class="submitDesign" type="button"
+                                [disabled]="registrationForm.invalid">Submit</button>  
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

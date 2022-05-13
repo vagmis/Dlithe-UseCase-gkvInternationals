@@ -1,0 +1,149 @@
+header{
+    position: relative;
+    top: 15px;
+}
+
+.navbar {
+  background-color: black;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  display: flex;
+  zoom: 0.60;
+  align-items:flex-end;
+}
+
+.navbar div{
+  margin: 0px;
+  padding-top: 5px;
+  padding-left: 50px;
+  margin-right: 300px;
+  color: aliceblue;
+  zoom: 1.2;
+}
+
+.navbarB ul {
+padding-right: 40px;
+/* padding-left: 350px; */
+text-align: right;
+margin: 0; 
+}
+
+.navbarB a{
+  color: #A9A9A9;
+}
+
+.navbarB li {
+display: inline-block;
+padding-left: 20px; 
+}
+
+.navbarC {
+padding-right: 40px;
+padding-left: 200px;
+text-align: right;
+margin: 0; 
+}
+
+.navbarButton{
+  background-color: yellow;
+  border: none;
+  color: black;
+  padding: 10px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.nav-img{
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+  .nav-main {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+   color:  rgba(0, 0, 0, 0.7);
+  }
+  .nav-text{
+    position: absolute;
+    font-style: italic;
+    top: 45%;
+    left: 50%;
+    font-size: large;
+    zoom:3.4;
+    color: black;
+
+    text-shadow: 1px 1px white;
+    font-weight: bolder;
+   transform: translate(-50%, -50%);
+  }
+
+  .home-content {
+    position: relative;
+}
+
+/* .home-message {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+} */
+
+.home-message{
+    font-family: 'Droid Serif', sans-serif;
+    font-style: italic;
+    display: block;
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    font-size: larger;
+    text-shadow: 2px 2px black;
+    color: white;
+
+   /* transform: translate(-50%, -50%); */
+    
+
+}
+
+.slider-bottom {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 3px;
+    z-index: 11;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.slider-bottom i {
+    display: block;
+    font-size: 30px;
+    padding: 20px;
+}
+
+
+.social a:hover {
+    opacity: 0.8;
+}
+
+.social a.facebook {
+    background-color: #3b5998;
+}
+.containerA {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+  
+
+  table {
+    width: 100%;
+  }

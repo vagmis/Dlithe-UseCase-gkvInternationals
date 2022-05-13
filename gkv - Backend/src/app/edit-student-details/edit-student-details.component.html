@@ -1,0 +1,126 @@
+<mat-toolbar class="toolbar">
+    <div style="margin-right:45%;">
+    </div>
+    <span>𝐄𝐃𝐈𝐓 𝐘𝐎𝐔𝐑 𝐃𝐄𝐓𝐀𝐈𝐋𝐒</span>
+</mat-toolbar>
+
+
+<form [formGroup]="editStudentForm">
+    <div class="body">
+        <div class="form-group">
+
+            <mat-grid-list cols="1" rowHeight="800px">
+                <mat-grid-tile>
+                    <div class="example-container">
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">First Name</mat-label>
+                            <input matInput class="form-control" formControlName="gkvStudentName"
+                                [ngModel]="editStudent.gkvStudentName">
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvStudentName'].touched &&editStudentForm.controls['gkvStudentName'].hasError('required') ">
+                                <span class="is-invalid">Name is required</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Surname</mat-label>
+                            <input matInput class="form-control" formControlName="gkvStudentSurname"
+                                [ngModel]="editStudent.gkvStudentSurname">
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvStudentSurname'].touched &&editStudentForm.controls['gkvStudentSurname'].hasError('required') ">
+                                <span class="is-invalid">Surname is required</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <br>
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Father Name</mat-label>
+                            <input matInput class="form-control" formControlName="gkvStudentFatherName"
+                                [ngModel]="editStudent.gkvStudentFatherName">
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvStudentFatherName'].touched &&editStudentForm.controls['gkvStudentFatherName'].hasError('required') ">
+                                <span class="is-invalid">Father name is required</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Mother Name</mat-label>
+                            <input matInput class="form-control" formControlName="gkvStudentMotherName"
+                                [ngModel]="editStudent.gkvStudentMotherName">
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvStudentMotherName'].touched &&editStudentForm.controls['gkvStudentMotherName'].hasError('required') ">
+                                <span class="is-invalid">Mother name is required</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Phone Number</mat-label>
+                            <input matInput placeholder="987654321" class="form-control"
+                                formControlName="gkvStudentPhoneNumber" [ngModel]="editStudent.gkvStudentPhoneNumber">
+
+                            <mat-error
+                                *ngIf=" submitted &&editStudentForm.controls['gkvStudentPhoneNumber'].hasError('required')">
+                                <span class="is-invalid">phone number is required</span>
+                            </mat-error>
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvStudentPhoneNumber'].dirty &&editStudentForm.controls['gkvStudentPhoneNumber'].invalid">
+                                Mobile number should have 10 digit
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Address</mat-label>
+                            <input matInput placeholder="#001,Dollar Colony" class="form-control"
+                                formControlName="gkvStudentAddress" [ngModel]="editStudent.gkvStudentAddress">
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvStudentAddress'].touched &&editStudentForm.controls['gkvStudentAddress'].hasError('required')">
+                                <span class="is-invalid">Adress is required</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Roll Number</mat-label>
+                            <input matInput placeholder="1233455" class="form-control"
+                                formControlName="gkvStudentRollNumber" [ngModel]="editStudent.gkvStudentRollNumber">
+
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvStudentRollNumber'].touched &&editStudentForm.controls['gkvStudentRollNumber'].hasError('required')">
+                                <span class="is-invalid">Roll Number is required</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Class Name</mat-label>
+                            <input matInput placeholder="COBAL" class="form-control" formControlName="gkvStandardName" [ngModel]="editStudent.gkvStandardName">
+
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvStandardName'].touched && editStudentForm.controls['gkvStandardName'].hasError('required')">
+                                <span class="is-invalid">CLASS Name</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field appearance="fill" class="width-100">
+                            <mat-label class="naming">Class</mat-label>
+                            <input matInput placeholder="1" class="form-control" formControlName="gkvClassNumber" [ngModel]="editStudent.gkvClassNumber">
+
+                            <mat-error
+                                *ngIf="editStudentForm.controls['gkvClassNumber'].touched && editStudentForm.controls['gkvClassNumber'].hasError('required')">
+                                <span class="is-invalid">CLASS Number</span>
+                            </mat-error>
+                        </mat-form-field>
+                        <br>
+                        <div>
+                            <div class=" form-group">
+                                <button type="button" class="disabled" [disabled]="" (click)="navigateLogOut()">Edit Deatils</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </div>
+
+</form>
