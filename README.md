@@ -1,17 +1,14 @@
 # gkvInternationals
 This project was generated with Angular CLI version 13.2.4.
 Landing Page
-![image](https://user-images.githubusercontent.com/101063754/168208177-2a018e01-f908-4c84-ac0d-e81d466bccca.png)
-![image](https://user-images.githubusercontent.com/101063754/168208254-a8de8d3a-7747-4d24-8037-86d13477a4ea.png)
-![image](https://user-images.githubusercontent.com/101063754/168208290-8931ffdf-743c-4015-ad59-99eb92750b01.png)
-![image](https://user-images.githubusercontent.com/101063754/168208349-5a83947e-ee7f-4c4e-800b-0ca7145c313b.png)![image](https://user-images.githubusercontent.com/101063754/168208379-d3a9618c-9f6c-4692-9cd6-b0222d78acfb.png)
-![image](https://user-images.githubusercontent.com/101063754/168208426-92dd62e2-d4e8-4c0a-8e13-7261eaa5ef98.png)![image](https://user-images.githubusercontent.com/101063754/168208453-729e6f77-38e1-4aa4-8008-d16ef7e62c13.png)
-![image](https://user-images.githubusercontent.com/101063754/168208500-a9914769-c62f-4320-824d-07ffc321169d.png)
-![image](https://user-images.githubusercontent.com/101063754/168208530-ea085a5e-fbcc-4eae-8104-d1834aa7556c.png)
-![Uploading image.png…]()
-![Uploading image.png…]()![Uploading image.png…]()
-![Uploading image.png…]()
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/101063754/168209562-41cee7bf-57dc-4712-a7c4-057a4a0e5262.png)
+![image](https://user-images.githubusercontent.com/101063754/168209729-53d71f06-22d0-4f07-8713-4e48519b523f.png)
+![image](https://user-images.githubusercontent.com/101063754/168209823-f43e7ea3-ad2b-4c8b-8a45-f6b4811c5183.png)
+![image](https://user-images.githubusercontent.com/101063754/168209915-4c2dbf45-4742-4a3a-8321-d7153d19721b.png)
+![image](https://user-images.githubusercontent.com/101063754/168209959-3336ce9b-ea31-4cf6-a897-40ee167881a9.png)
+![image](https://user-images.githubusercontent.com/101063754/168210046-1a9cf430-3552-485f-8305-e7b200db340e.png)
+![image](https://user-images.githubusercontent.com/101063754/168210124-ad78061b-12a6-4d6e-9404-42588be9204c.png)
+![image](https://user-images.githubusercontent.com/101063754/168210170-d7704e83-1022-4e87-829e-549b2fab8b0a.png)
 
 Backend End - Instructions
 Development server
